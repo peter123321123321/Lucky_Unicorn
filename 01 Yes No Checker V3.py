@@ -1,7 +1,5 @@
 """Lu Y/N
-simplifies input by converting it to lowercase.
-prints user choice
-also allows for y or n input
+puts v2 in a loop to make testing easier
 """
 
 check = ""
