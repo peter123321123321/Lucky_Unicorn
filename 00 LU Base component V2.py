@@ -31,10 +31,10 @@ def yes_no(question_text):
 
 # Function to show instructions
 def instructions():
-    print("=== How To Play ===")
-    print("")
+    print(formatter("=", "How To Play"))
+    print()
     print("instructions go here")
-    print("")
+    print()
 
 
 # Number checking function
@@ -71,6 +71,8 @@ def generate_tokens(balance):
         if 1 <= computer <= 5:
             token = "unicorn"
             balance += 4
+            print(formatter("!", "Congratulations, you got a unicorn"))
+            print()
 
         # if computer is between 6-36
         # user gets a zebra(-1$ to balance)
@@ -102,7 +104,16 @@ def generate_tokens(balance):
     return balance
 
 
+def formatter(symbol, text):
+    sides = symbol * 3
+    formatted_text = f"{sides} {text} {sides}"
+    top_bottom = symbol * len(formatted_text)
+    return f"{top_bottom}\n{formatted_text}\n{top_bottom}"
+
+
 # Main Routine goes here...
+print(formatter("-", "Welcome to the Lucky Unicorn Game"))
+print()
 played_before = yes_no("Have you played before: ")
 
 if played_before == "No":
@@ -116,4 +127,4 @@ closing_balance = generate_tokens(starting_balance)
 print("Thanks for playing")
 print(f"You started with ${starting_balance:.2f}")
 print(f"and leave with ${closing_balance:.2f}")
-print("Goodbye")
+print(formatter("*", "Goodbye"))
