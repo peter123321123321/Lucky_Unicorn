@@ -40,7 +40,7 @@ def instructions():
     print()
     print("It costs $1 to play each round but, depending on your prize, you "
           "could win some of your money back. These are the payout amounts:\n"
-          "\tUnicorn: $5.00(balance increases by $4\n"
+          "\tUnicorn: $5.00(balance increases by $4.00)\n"
           "\tZebra: $0.00(balance decreases by $1.00)\n"
           "\tHorse: $0.50(balance decreases by $0.50)\n"
           "\tDonkey: $0.50(balance decreases by $0.50)\n")
