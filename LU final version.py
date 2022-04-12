@@ -1,5 +1,5 @@
-"""Lu Y/N
-based off 01 yes no checker v3
+"""Lu FINAL VERSION
+final version
 """
 import random
 
@@ -26,7 +26,7 @@ def yes_no(question_text):
 
         # Otherwise - show error
         else:
-            print("Error - Please enter yes or no")
+            print("Error - Please enter yes or no ")
 
 
 # Function to show instructions
@@ -54,7 +54,7 @@ def instructions():
 # Number checking function
 def num_check(question, low, high):
     error = "That is not a valid number\n" \
-            "please enter a number between 1 and 10\n".format(low, high)
+            "please enter a number between 1 and 10 \n".format(low, high)
 
     # Keep asking until a valid number(1, 10) is input
     while True:
@@ -92,7 +92,7 @@ def generate_tokens(balance):
         # user gets a zebra(-1$ to balance)
         elif 6 <= computer <= 36:
             balance -= 1
-            print(formatter("Z", "Bad luck you got a Zebra"))
+            print(formatter("Z", "Bad luck, you got a Zebra"))
             print()
 
             # in all other cases token is a Donkey or Horse
@@ -101,12 +101,13 @@ def generate_tokens(balance):
             balance -= 0.5
             # if computer is even set token as Horse
             if computer % 2 == 0:
-                print(formatter("H", "You got Horse"))
+                print(formatter("H", "Hard luck, You got Horse"))
+                print()
 
             # in all other cases set token as Donkey
             else:
-                print(formatter("D", "You got a Donkey"))
-
+                print(formatter("D", "Unlucky, You got a Donkey"))
+                print()
         # Output
         print(f"Your Balance is now: ${balance:.2f}")
         if balance < 1:
@@ -114,7 +115,7 @@ def generate_tokens(balance):
             play_again = "x"
         else:
             play_again = input("\nDo you want to play another round?\n"
-                               "<enter> to play again or 'X' to exit").lower()
+                               "<enter> to play again or 'X' to exit ").lower()
         print()
     return balance
 
@@ -130,7 +131,6 @@ def formatter(symbol, text):
 print(formatter("-", "Welcome to the Lucky Unicorn Game"))
 print()
 played_before = yes_no("Have you played before? ")
-
 if played_before == "No":
     instructions()
 
