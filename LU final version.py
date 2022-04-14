@@ -35,16 +35,16 @@ def instructions():
     print()
     print("Choose a starting amount to play with - must be between $1 and $10")
     print()
-    print("Then press <enter> to play. You will get a random token which might"
-          " be a horse, a zebra, a donkey, or a unicorn")
+    print("Then press <enter> to play. You will get a random token which will"
+          " be either a Horse, a Donkey, a Zebra, or a Unicorn")
     print()
-    print("It costs $1 to play each round but, depending on your prize, you "
+    print("It costs $1 to play per round but, depending on your prize, you "
           "could win some of your money back. These are the payout amounts:\n"
           "\tUnicorn: $5.00(balance increases by $4.00)\n"
           "\tZebra: $0.00(balance decreases by $1.00)\n"
           "\tHorse: $0.50(balance decreases by $0.50)\n"
           "\tDonkey: $0.50(balance decreases by $0.50)\n")
-    print("\nSee if you can avoid zebras, get the unicorns, and finish with"
+    print("\nSee if you can avoid Zebras, get the Unicorns, and finish with"
           " more money than you started with.\n")
 
     print("*" * 150)
@@ -55,7 +55,6 @@ def instructions():
 def num_check(question, low, high):
     error = "That is not a valid number\n" \
             "please enter a number between 1 and 10 \n".format(low, high)
-
     # Keep asking until a valid number(1, 10) is input
     while True:
         try:
@@ -101,7 +100,7 @@ def generate_tokens(balance):
             balance -= 0.5
             # if computer is even set token as Horse
             if computer % 2 == 0:
-                print(formatter("H", "Hard luck, You got Horse"))
+                print(formatter("H", "Hard luck, You got a Horse"))
                 print()
 
             # in all other cases set token as Donkey
